@@ -1,3 +1,4 @@
+var map;
 // OnLoad (DOMContentLoaded) Script
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const lat = r.location.lat
         const lng = r.location.lng
 
-        var map = L.map('map').setView([lat, lng], 13);
+        map = L.map('map').setView([lat, lng], 13);
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
@@ -79,6 +80,7 @@ btn.addEventListener('click', () => {
             const lat = r.location.lat
             const lng = r.location.lng
 
+            map.remove()
             map = L.map('map').setView([lat, lng], 13);
 
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -86,7 +88,6 @@ btn.addEventListener('click', () => {
                 attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
 
-            marker = L.marker([lat, lng]).addTo(map)
         })
     } else {
         alert('Entre um valor de IP válido!')
