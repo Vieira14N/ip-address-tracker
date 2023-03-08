@@ -1,0 +1,50 @@
+@media screen and (max-width: 1000px) {
+
+    /* Header */
+
+
+    
+}
+
+@media screen and (max-width: 940px) {
+
+    /* Header */
+
+    .info-div{
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    .info-div .info{
+        width: 210px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 645px) {
+
+    /* Header */
+
+    header {
+        background-image: url(images/pattern-bg-mobile.png);
+    }
+
+    .input-div{
+        width: 90%;
+    }
+
+    .input-div input{
+        width: 91%;
+    }
+   
+    .info-div{
+        width: 90%;
+        justify-content: center;
+        top: 290px;
+    }
+
+    .info-div .info{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
